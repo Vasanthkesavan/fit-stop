@@ -9,7 +9,9 @@
   },
   "scripts": {
     "prestart": "babel ./client/src --out-dir client/public/compiled --presets=es2015,react --ignore=node_modules,compiled --source-maps inline",
-    "start": "nodemon ./server/server.js",
+    "nMon": "nodemon ./server/server.js",
+    "pol-aud": "node polly/polly.auth.js",
+    "start": "concurrently --kill-others \"npm run nMon\"",
     "watch": "babel ./client/src --out-dir client/public/compiled --presets=es2015,react --ignore=node_modules,compiled --source-maps inline --watch"
   },
   "dependencies": {
@@ -36,5 +38,8 @@
     "session": "^0.1.0",
     "spotify-web-api-js": "^0.22.1",
     "twilio": "^3.8.1"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
   }
 }
