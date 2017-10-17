@@ -17,10 +17,10 @@
 
 ## Requirements
 
-> Front-End:React 
-> Back-End: Node.js, Express
-> API: Twilio, Spotify, Amazon Polly
-> Database: MongoDB
+-__Front-End__:React 
+-__Back-End__: Node.js, Express
+-__API__: Twilio, Spotify, Amazon Polly
+-__Database__: MongoDB
 
 ## Development
 
